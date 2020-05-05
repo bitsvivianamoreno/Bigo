@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .user {
+    font-size: 16px;
+
+    &-user {
+      width: 20px;
+      height: 20px;
+    }
+
+    &-greeting {
+      font-weight: bold;
+    }
+  }
+}
