@@ -14,7 +14,7 @@ export default class Router extends Component {
           <Route path='/invoice' exact component={Invoice}/>
           {/* <Route path='/index' exact />
           <Route path='/post/:id' />
-          <Route path='/about' component={About} /> */}
+          <Route path='/user' component={User} /> */}
         </Switch>
       </BrowserRouter>
     );

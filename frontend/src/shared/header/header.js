@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import { Link } from "react-router-dom";
+import React, {Component} from 'react';
+// import { Link } from "react-router-dom";
 import './header.css'
 
 export class Header extends Component {
@@ -7,13 +7,14 @@ export class Header extends Component {
     return (
       <div className="header">
         <div className="logo">
-          Bigo
+          <img src='./img/logo.png' alt="user" className="user-img"/>
         </div>
 
         <div className="user">
-          <img src="" alt="user" className="user-img"/>
+          <img src='' alt="user" className="user-img"/>
+
           <span className="user-greeting">
-            hola Juan
+            Hola, Juan
           </span>
         </div>
 

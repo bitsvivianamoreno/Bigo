@@ -1,0 +1,26 @@
+.content {
+  padding: 10px;
+
+  .title {
+    text-align: justify;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .invoice {
+    display: flex;
+    margin-top: 10px;
+
+    &-list {
+      width: 30%;
+      background-color: #cdcdcd;
+    }
+
+    &-detail {
+      width: 70%;
+      background-color: #7db5cf;
+    }
+  }
+}

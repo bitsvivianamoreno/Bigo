@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  align-items: center; }
+  align-items: center;
+  background-color: #002e6d;
+  color: #ffffff; }
   .header .logo {
     font-size: 28px;
     font-weight: bold; }
