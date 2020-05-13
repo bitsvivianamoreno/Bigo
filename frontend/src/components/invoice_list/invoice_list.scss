@@ -1,0 +1,48 @@
+.invoice-data {
+  cursor: pointer;
+  border-bottom: 1px solid #d0cfce;
+  padding: 10px 10px 1px 10px;
+  color: #675f5f;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+
+  &:hover {
+    background-color: #69a7fd;
+    color: #ffffff;
+
+    & .d-flex .data.status,
+    & .d-flex .data.status.expired,
+    & .d-flex .data.amount {
+      color: #ffffff;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+
+    .data {
+      padding-bottom: 10px;
+
+      &.status {
+        font-weight: bold;
+        color: #1e69d8;
+        font-style: italic;
+
+        &.expired {
+          color: #ff7729;
+        }
+      }
+
+      &.expiration-date {
+        font-style: italic;
+        font-size: 13px;
+      }
+
+      &.amount {
+        font-size: 20px;
+        color: #5d5d5d;
+      }
+    }
+  }
+}

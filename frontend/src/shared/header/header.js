@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-// import { Link } from "react-router-dom";
-import './header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import './header.css';
 
 export class Header extends Component {
   render() {
@@ -11,33 +12,14 @@ export class Header extends Component {
         </div>
 
         <div className="user">
-          <img src='' alt="user" className="user-img"/>
+          <div className="user-icon">
+            <FontAwesomeIcon icon={faUser}/>
+          </div>
 
           <span className="user-greeting">
             Hola, Juan
           </span>
         </div>
-
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">
-                Home
-              </Link>
-              </li>
-            <li>
-              <Link to="/users">
-                Users
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/about">
-                About
-              </Link>
-            </li>
-          </ul>
-        </nav> */}
       </div>
     )
   }

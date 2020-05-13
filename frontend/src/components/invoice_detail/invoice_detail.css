@@ -1,0 +1,74 @@
+.detail .line-number {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 30px 0px; }
+  @media only screen and (max-width: 768px) {
+    .detail .line-number {
+      font-size: 25px;
+      padding-bottom: 5px; } }
+
+.detail .d-flex {
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 768px) {
+    .detail .d-flex {
+      display: block; } }
+  .detail .d-flex.data {
+    letter-spacing: -0.4px;
+    padding: 25px 90px 0px;
+    text-align: initial; }
+    @media only screen and (max-width: 980px) {
+      .detail .d-flex.data {
+        padding: 25px 30px 0px; } }
+    @media only screen and (max-width: 768px) {
+      .detail .d-flex.data {
+        padding: 25px 16px 0px;
+        text-align: center; } }
+    @media only screen and (max-width: 768px) {
+      .detail .d-flex.data .payment-reference {
+        padding-top: 20px; } }
+    .detail .d-flex.data .payment-reference .number-reference {
+      font-size: 20px;
+      font-weight: bold; }
+    .detail .d-flex.data .invoice-status {
+      padding-top: 25px; }
+      .detail .d-flex.data .invoice-status .status {
+        font-weight: bold;
+        color: #1e69d8;
+        font-style: italic;
+        font-size: 20px; }
+      .detail .d-flex.data .invoice-status .expired {
+        color: #ff7729; }
+    .detail .d-flex.data .currency-amount {
+      right: 25px;
+      position: relative;
+      padding-top: 32px; }
+      @media only screen and (max-width: 768px) {
+        .detail .d-flex.data .currency-amount {
+          position: initial; } }
+      .detail .d-flex.data .currency-amount .amount {
+        font-weight: bold;
+        font-size: 32px;
+        color: #3c3c3c; }
+    .detail .d-flex.data .history-payment {
+      text-decoration: underline;
+      color: #1e69d8;
+      font-style: italic; }
+      @media only screen and (max-width: 768px) {
+        .detail .d-flex.data .history-payment {
+          padding-bottom: 20px; } }
+    .detail .d-flex.data .invoice-pay {
+      padding-bottom: 20px; }
+      .detail .d-flex.data .invoice-pay .pay {
+        background-color: #69a7fd;
+        border: 0;
+        border-radius: 4px;
+        padding: 10px;
+        width: 81px;
+        color: #ffffff;
+        outline: none; }
+        .detail .d-flex.data .invoice-pay .pay:hover {
+          background-color: #1e69d8; }
+
+.pointer {
+  cursor: pointer; }

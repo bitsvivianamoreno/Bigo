@@ -1,0 +1,13 @@
+.footer {
+  background-color: #002e6d;
+  position: relative;
+  top: 32px;
+  box-shadow: 0 0 7px #000000;
+  color: #ffffff;
+  padding: 17px 0px;
+  font-size: 12px;
+
+  @media only screen and (max-width: 768px){
+    position: initial;
+  }
+}

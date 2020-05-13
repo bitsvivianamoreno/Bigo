@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import './invoice.list.css';
+import './invoice_list.css';
 
 export class InvoiceList extends Component {
   static propTypes = {
@@ -26,26 +26,24 @@ export class InvoiceList extends Component {
     } = this.props;
 
     return (
-      <div className="hhh" onClick={detail}>
-        <div key={payment_reference}>
-          <div>
-            <span>
-              (+{country_mobile_code}) {formatted_line_number}
-            </span>
-
-            <span>
-              {currency}{amount}
-            </span>
+      <div className="invoice-data" key={payment_reference} onClick={detail}>
+        <div className="d-flex">
+          <div className="data">
+            (+{country_mobile_code}) {formatted_line_number}
           </div>
 
-          <div>
-            <span>
-              {invoice_status}
-            </span>
+          <div className= {`data status ${invoice_status === 'Vencida' ? "expired" : ""}`}>
+            {invoice_status}
+          </div>
+        </div>
 
-            <span>
-              {expiration_date}
-            </span>
+        <div className="d-flex">
+          <div className="data amount">
+            {currency} {amount}.000
+          </div>
+
+          <div className="data expiration-date">
+            {expiration_date}
           </div>
         </div>
       </div>

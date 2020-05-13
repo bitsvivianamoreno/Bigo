@@ -5,6 +5,7 @@
   align-items: center;
   background-color: #002e6d;
   color: #ffffff;
+  box-shadow: 0 0 7px #000000;
 
   .logo {
     font-size: 28px;
@@ -13,10 +14,14 @@
 
   .user {
     font-size: 16px;
+    display: flex;
+    align-items: center;
 
-    &-user {
-      width: 20px;
-      height: 20px;
+    &-icon {
+      color: #69a7fd;
+      margin-right: 5px;
+      padding: 1px 3px;
+      background-color: #ffffff;
     }
 
     &-greeting {

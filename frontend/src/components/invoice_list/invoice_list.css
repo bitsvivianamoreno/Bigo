@@ -1,0 +1,31 @@
+.invoice-data {
+  cursor: pointer;
+  border-bottom: 1px solid #d0cfce;
+  padding: 10px 10px 1px 10px;
+  color: #675f5f;
+  font-size: 14px;
+  letter-spacing: -0.3px; }
+  .invoice-data:hover {
+    background-color: #69a7fd;
+    color: #ffffff; }
+    .invoice-data:hover .d-flex .data.status,
+    .invoice-data:hover .d-flex .data.status.expired,
+    .invoice-data:hover .d-flex .data.amount {
+      color: #ffffff; }
+  .invoice-data .d-flex {
+    display: flex;
+    justify-content: space-between; }
+    .invoice-data .d-flex .data {
+      padding-bottom: 10px; }
+      .invoice-data .d-flex .data.status {
+        font-weight: bold;
+        color: #1e69d8;
+        font-style: italic; }
+        .invoice-data .d-flex .data.status.expired {
+          color: #ff7729; }
+      .invoice-data .d-flex .data.expiration-date {
+        font-style: italic;
+        font-size: 13px; }
+      .invoice-data .d-flex .data.amount {
+        font-size: 20px;
+        color: #5d5d5d; }

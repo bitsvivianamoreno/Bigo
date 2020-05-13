@@ -1,0 +1,65 @@
+.content-history .header-modal {
+  align-items: initial;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px; }
+  .content-history .header-modal-title {
+    margin: 0;
+    display: block;
+    width: 850px;
+    padding: 10px 17px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.7em;
+    margin-bottom: 10px; }
+    @media only screen and (max-width: 768px) {
+      .content-history .header-modal-title {
+        padding: 0px; } }
+  .content-history .header-modal-icon {
+    font-size: 22px;
+    cursor: pointer;
+    color: #686d86; }
+    .content-history .header-modal-icon:hover {
+      transform: scale(1.2); }
+
+.content-history .table {
+  background: #ffffff;
+  border-radius: 3px;
+  border-collapse: collapse;
+  height: 300px;
+  overflow: auto;
+  margin: auto;
+  text-align: left;
+  max-width: 70%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite; }
+  .content-history .table th {
+    color: #ffffff;
+    background-color: #002e6d;
+    border-bottom: 4px solid #ffffff;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 18px;
+    vertical-align: middle; }
+  .content-history .table tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color: #666B85;
+    font-size: 16px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1); }
+    .content-history .table tr:hover td {
+      background: #69a7fd;
+      color: #FFFFFF; }
+    .content-history .table tr:first-child {
+      border-top: none; }
+    .content-history .table tr:last-child {
+      border-bottom: none; }
+    .content-history .table tr:nth-child(odd) td {
+      background: #EBEBEB; }
+    .content-history .table tr:nth-child(odd):hover td {
+      background: #69a7fd; }
+    .content-history .table tr td {
+      padding: 10px; }
+      @media only screen and (max-width: 768px) {
+        .content-history .table tr td {
+          padding: 20px; } }

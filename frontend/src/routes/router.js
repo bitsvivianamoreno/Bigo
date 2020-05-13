@@ -7,14 +7,11 @@ export default class Router extends Component {
     return (
       <BrowserRouter>
         <Redirect
-          from="/"
+          from="/invoice"
           to="/invoice"
           />
         <Switch>
           <Route path='/invoice' exact component={Invoice}/>
-          {/* <Route path='/index' exact />
-          <Route path='/post/:id' />
-          <Route path='/user' component={User} /> */}
         </Switch>
       </BrowserRouter>
     );

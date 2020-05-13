@@ -1,5 +1,13 @@
 .content {
-  padding: 10px; }
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px 0px; }
+  @media only screen and (max-width: 1010px) {
+    .content {
+      width: 90%; } }
+  @media only screen and (max-width: 768px) {
+    .content {
+      width: 95%; } }
   .content .title {
     text-align: justify;
     font-size: 25px;
@@ -8,10 +16,38 @@
     padding: 10px; }
   .content .invoice {
     display: flex;
-    margin-top: 10px; }
+    height: 425px;
+    margin-top: 10px;
+    box-shadow: 0 0 8px #cdcdcd;
+    border-radius: 4px; }
+    @media only screen and (max-width: 768px) {
+      .content .invoice {
+        display: block;
+        height: auto; } }
     .content .invoice-list {
-      width: 30%;
-      background-color: #cdcdcd; }
+      width: 40%;
+      border-radius: 4px 0px 0px 4px; }
+      @media only screen and (max-width: 768px) {
+        .content .invoice-list {
+          width: 100%; } }
+      .content .invoice-list .invoices {
+        height: 80%;
+        overflow: auto;
+        padding: 10px; }
+        @media only screen and (max-width: 768px) {
+          .content .invoice-list .invoices {
+            height: 38vh; } }
+        .content .invoice-list .invoices::-webkit-scrollbar {
+          width: 8px; }
+          .content .invoice-list .invoices::-webkit-scrollbar-thumb {
+            background: #69a7fd;
+            border-radius: 4px; }
+        .content .invoice-list .invoices::-webkit-scrollbar-track {
+          background: #e1e1e1; }
     .content .invoice-detail {
-      width: 70%;
-      background-color: #7db5cf; }
+      width: 60%;
+      background-color: #f7f7f7;
+      border-radius: 0px 4px 4px 0px; }
+      @media only screen and (max-width: 768px) {
+        .content .invoice-detail {
+          width: 100%; } }

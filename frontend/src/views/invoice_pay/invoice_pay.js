@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Modal from 'react-modal'
 import { getListInvoices, getDetailInvoice } from '../../services/invoices.service'
 import './invoice_pay.css';
 import { Search } from '../../components/search/search'
 import { InvoiceList } from '../../components/invoice_list/invoice_list';
 import { InvoiceDetail } from '../../components/invoice_detail/invoice_detail';
+import { HistoryPayments } from '../../components/history_payments/history_payments'
 
 const title = 'Pagar facturas';
 
@@ -23,7 +25,7 @@ export class Invoice extends Component {
       invoices: [],
       invoice: [],
       filter: '',
-      showModal: false
+      modalIsOpen: false
     }
   };
 
@@ -31,27 +33,24 @@ export class Invoice extends Component {
     const responseInvoices = await getListInvoices();
     this.setState({ invoices: responseInvoices.data, isFetch: false });
 
-    let {invoices} = this.state
+    let {invoices} = this.state;
     this._serviceDetail(invoices[0]._id);
+
+    Modal.setAppElement('body')
   };
 
   async _serviceDetail(id) {
     const responseInvoiceDetail = await getDetailInvoice(id);
     this.setState({ invoice: responseInvoiceDetail.data, isFetch: false });
+
+    let {invoice} = this.state;
+    localStorage.setItem('detail', JSON.stringify(invoice));
   };
 
   _filterUpdate(value) {
     this.setState({
       filter: value
     })
-  };
-
-  showModal = () => {
-    this.setState({ showModal: true });
-  };
-
-  hideModal = () => {
-    this.setState({ showModal: false });
   };
 
   _renderInvoices() {
@@ -95,13 +94,12 @@ export class Invoice extends Component {
         invoice_status = {invoice.invoice_status}
         currency = {invoice.currency}
         amount = {invoice.amount}
-        payment_history = {this.showModal}
+        payment_history = {() => this.setState({ modalIsOpen: true })}
       />
     )
   };
 
   render() {
-
     return (
       <div className="content">
         {element}
@@ -113,18 +111,21 @@ export class Invoice extends Component {
               _filterUpdate = {this._filterUpdate.bind(this)}
             />
 
-              {this._renderInvoices()}
+              <div className="invoices">
+                {this._renderInvoices()}
+              </div>
           </div>
 
           <div className="invoice-detail">
             {this._renderInvoice()}
           </div>
         </div>
+
+        <Modal isOpen={this.state.modalIsOpen}>
+          <HistoryPayments close={() => this.setState({ modalIsOpen: false })}/>
+        </Modal>
         
       </div>
     )
   };
 };
-
-const container = document.createElement("div");
-document.body.appendChild(container);

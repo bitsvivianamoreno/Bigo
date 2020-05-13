@@ -1,5 +1,15 @@
 .content {
-  padding: 10px;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px 0px;
+
+  @media only screen and (max-width: 1010px){
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 768px){
+    width: 95%;
+  }
 
   .title {
     text-align: justify;
@@ -11,16 +21,56 @@
 
   .invoice {
     display: flex;
+    height: 425px;
     margin-top: 10px;
+    box-shadow: 0 0 8px #cdcdcd;
+    border-radius: 4px;
+
+    @media only screen and (max-width: 768px){
+      display: block;
+      height: auto;
+    }
 
     &-list {
-      width: 30%;
-      background-color: #cdcdcd;
+      width: 40%;
+      border-radius: 4px 0px 0px 4px;
+
+      @media only screen and (max-width: 768px){
+        width: 100%;
+      }
+
+      .invoices {
+        height: 80%;
+        overflow: auto;
+        padding: 10px;
+
+        @media only screen and (max-width: 768px){
+          height: 38vh;
+        }
+
+        &::-webkit-scrollbar {
+          width: 8px;
+
+          &-thumb {
+            background: #69a7fd;
+            border-radius: 4px;
+          }
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #e1e1e1;
+        }
+      }
     }
 
     &-detail {
-      width: 70%;
-      background-color: #7db5cf;
+      width: 60%;
+      background-color: #f7f7f7;
+      border-radius: 0px 4px 4px 0px;
+
+      @media only screen and (max-width: 768px){
+        width: 100%;
+      }
     }
   }
 }

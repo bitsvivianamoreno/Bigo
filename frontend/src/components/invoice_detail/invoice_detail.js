@@ -30,12 +30,12 @@ export class InvoiceDetail extends Component {
     } = this.props;
 
     return (
-      <div>
-        <div>
+      <div className="detail">
+        <div className="line-number">
           (+{country_mobile_code}) {formatted_line_number}
         </div>
 
-        <div>
+        <div className="d-flex data">
           <div>
             <div>
               Fecha de vencimiento
@@ -46,18 +46,18 @@ export class InvoiceDetail extends Component {
             </div>
           </div>
 
-          <div>
+          <div className="payment-reference">
             <div>
               Referencia de pago
             </div>
 
-            <div>
+            <div className="number-reference">
               {payment_reference}
             </div>
           </div>
         </div>
 
-        <div>
+        <div className="d-flex data">
           <div>
             <div>
               <div>
@@ -69,37 +69,37 @@ export class InvoiceDetail extends Component {
               </div>
             </div>
 
-            <div>
+            <div className="invoice-status">
               <div>
                 Estado de factura
               </div>
 
-              <div>
+              <div className= {`status ${invoice_status === 'Vencida' ? "expired" : ""}`}>
                 {invoice_status}
               </div>
             </div>
           </div>
 
-          <div>
+          <div className="currency-amount">
             <div>
               Valor a pagar
             </div>
 
-            <div>
-              {currency} {amount}
+            <div className="amount">
+              {currency} {amount}.000
             </div>
           </div>
         </div>
 
-        <div>
-          <div>
-            <button onClick={payment_history}>
+        <div className="d-flex data">
+          <div className="history-payment">
+            <small className="pointer" onClick={payment_history}>
               Ver historial de pagos
-            </button>
+            </small>
           </div>
 
-          <div>
-            <button onClick={pay}>
+          <div className="invoice-pay">
+            <button className="pay pointer" onClick={pay}>
               Pagar
             </button>
           </div>  

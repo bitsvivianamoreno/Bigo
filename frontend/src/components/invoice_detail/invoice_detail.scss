@@ -1,0 +1,110 @@
+.detail {
+  .line-number {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 30px 0px;
+
+    @media only screen and (max-width: 768px){
+      font-size: 25px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 768px){
+      display: block;
+    }
+
+    &.data {
+      letter-spacing: -0.4px;
+      padding: 25px 90px 0px;
+      text-align: initial;
+
+      @media only screen and (max-width: 980px){
+        padding: 25px 30px 0px;
+      }
+
+      @media only screen and (max-width: 768px){
+        padding: 25px 16px 0px;
+        text-align: center;
+      }
+
+      .payment-reference {
+        @media only screen and (max-width: 768px){
+          padding-top: 20px;
+        }
+
+        .number-reference {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+
+      .invoice-status {
+        padding-top: 25px;
+
+        & .status {
+          font-weight: bold;
+          color: #1e69d8;
+          font-style: italic;
+          font-size: 20px;
+        }
+
+        & .expired {
+          color: #ff7729;
+        }
+      }
+
+      .currency-amount {
+        right: 25px;
+        position: relative;
+        padding-top: 32px;
+
+        @media only screen and (max-width: 768px){
+          position: initial;
+        }
+
+        .amount {
+          font-weight: bold;
+          font-size: 32px;
+          color: #3c3c3c;
+        }
+      }
+
+      .history-payment {
+        text-decoration: underline;
+        color: #1e69d8;
+        font-style: italic;
+
+        @media only screen and (max-width: 768px){
+          padding-bottom: 20px;
+        }
+      }
+
+      .invoice-pay {
+        padding-bottom: 20px;
+
+        .pay {
+          background-color: #69a7fd;
+          border: 0;
+          border-radius: 4px;
+          padding: 10px;
+          width: 81px;
+          color: #ffffff;
+          outline: none;
+
+          &:hover {
+            background-color: #1e69d8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
